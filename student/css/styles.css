@@ -17,6 +17,7 @@
 	- Identify the number of layouts.
 	- Identify when the layouts change (eg. the 'breakpoints').
 	- Test your media queries by making an obvious change to the document, and seeing if it's correctly applied.
+
 - Keep in mind:
 	- Preview your CSS in the browser often. Small mistakes can prevent entire stylesheets from being applied.
 	- If you're writing a rule that should only be applied when the screen is a certain size, make sure it's inside a media query!
@@ -49,3 +50,122 @@ body {
 /*
  Write *YOUR* styles here!
 */
+html {
+	font-famil: Georgia, serif;
+/*make 1rem = 1 px*/
+	font-size: 62.5%; /* 10px target / 16px content = 62.5 % result */
+	line-height: 1.5;
+	background: #EEE;
+}
+h1,
+h2 {
+	font-family: Arial, sans-serif;
+	color: darkslateblue;
+}
+a {
+	color: darkslateblue;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Header Syles */
+
+header {
+	text-align: center;
+	padding: 2rem 0;
+	background: white;
+}
+.brand {
+	font-size: 2rem;
+	margin: 0;
+}
+/*h1 tag*/
+.brand-supporting {
+	display: none;
+}
+
+/*intro styles*/
+
+.intro {
+	display:none;
+}
+footer {
+	background-color: #222222;
+	padding: 3rem 2rem;
+	color: #999;
+	font-size: 1.5rem;
+}
+
+footer p {
+
+}
+
+/*post styles*/
+.post {
+	margin-bottom: 4em;
+	background: white;
+	font-size: 4vw;
+	/*target 16px / 400px context = 0.04result */
+}
+
+.post div {
+	padding: 2rem;
+}
+/*post title*/
+.post h2 {
+	font-size: 2em;
+	/* 32px/16px =2em*/
+}
+/*author information*/
+
+.post h3 {
+/* font-size of h3 when browser is 400px*/
+font-size: 0.75em;
+/*  12px/16px = .75*/
+}
+
+/*Responsive styles*/
+
+@media ( min-width: 600px ) {
+	/*header styles*/
+ header {
+	 text-align: left;
+	 margin-bottom: 4rem;
+	 /* 40px/10px = 4rem*/
+	 border-bottom: 0.1rem solid #BBB;
+	 padding-left: 2rem;
+	 padding-right: 2rem;
+ }
+
+.brand {
+	font-size: 3rem;
+	/**/
+}
+
+ .brand-supporting {
+	 display: inline-block;
+	 color: #BBB;
+	 font-weight: normal;
+	 font-size: 0.666em;
+ }
+
+ /*Post Styles*/
+ .post-wrapper {
+	 padding:0 2rem;
+ }
+.post {
+	width: 48%;
+	float: left;
+	margin-bottom: 4%;
+	font-size: 1.5rem;
+	/*15px/10px = 1.5rem*/
+}
+
+.post:nth-child( 2n ) {
+	margin-left: 4%;
+}
+
+}
