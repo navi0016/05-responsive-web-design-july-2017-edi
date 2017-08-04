@@ -1,4 +1,4 @@
-Responsive Web Design
+# Responsive Web Design
 
 ## Table of Contents
 - [About](#about)
